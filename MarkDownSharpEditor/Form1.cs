@@ -2099,8 +2099,8 @@ namespace MarkDownSharpEditor
 		//-----------------------------------
 		private void menuUndo_Click(object sender, EventArgs e)
 		{
-		  if (UndoBuffer.Count > 0)
-		  {
+			if (UndoBuffer.Count > 0 && undoCount > 0)
+			{
 				//現在のカーソル位置
 				int selectStart = this.richTextBox1.SelectionStart;
 				int selectEnd = richTextBox1.SelectionLength;
@@ -2125,7 +2125,7 @@ namespace MarkDownSharpEditor
 					FormTextChange();
 				}
 
-		  }
+			}
 
 		}
 		//-----------------------------------
